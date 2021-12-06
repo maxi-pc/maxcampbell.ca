@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import url('https://fonts.googleapis.com/css?family=Readex+Pro:400');
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
+.toggleDarkButton {
+    padding: 10;
+    border: none;
+    background: none;
+    }:hover{
+    rotate: 90degree;
+    }
+    
+    .container404{
+        max-width: 500px;
+        margin: auto;
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+    
+    .centerNameContent{
+ 
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .centerPageContent{
+        width: 500px;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%) 
+      }
+
+      h2{
+        font-size: 26px;
+      }
+    
+    .name{
+        font-family: 'Hurricane', cursive;
+        font-size: 140px;
+        line-height: 180px;  
+        
+    }
+
+    @media only screen and (max-width: 500px) {
+
+      .name{
+          font-family: 'Hurricane', cursive;
+          font-size: 60px;
+          line-height: 60px;  
+      }
+      .centerNameContent{
+ 
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    
+      }
+
+      h2{
+        font-size: 18px;
+      }
+      
+   }
+    
+    
+    .hidden{
+      font-size: 0px;  
+    }
+        
