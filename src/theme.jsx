@@ -12,7 +12,18 @@ body {
   font-weight: 400;
   line-height: 1.75;
   color: #000000;
+
+
 }
+    .btn-hidden{
+    border: transparent;
+    background-color: transparent;
+    color: transparent;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+  }
 
 p {margin-bottom: 1rem;}
 
@@ -75,10 +86,6 @@ small, .text_small {font-size: 0.8rem;}
       background: none;
       box-shadow: none;
   }
-
-  @media only screen and (max-width: 600px){
-
-}
 
   .btn-icon{
   }
@@ -251,13 +258,6 @@ export const Navigation = styled.header`
   height: 50px;
   background: ${({ theme }) => theme.navColor};
 
-  .btn-hidden{
-    border: transparent;
-    background-color: transparent;
-    color: transparent;
-  }
-
-
   .logo a {
     padding-top: 33px;
     display: flex;
@@ -300,7 +300,7 @@ export const Navigation = styled.header`
   a:hover {
     opacity: 1;
   }
-  .fa-bars {
+  .fabars {
     display: none;
     color: white;
     font-size: 2rem;
@@ -327,11 +327,6 @@ export const Navigation = styled.header`
     a.active {
       color: #15cdfc;
     }
-    span {
-      position: absolute;
-      top: 0;
-      right: 5px;
-    }
   }
 
   @media only screen and (max-width: 800px) {
@@ -341,20 +336,8 @@ export const Navigation = styled.header`
       padding-top: 0px !important;
     }
   }
-
-@media only screen and (min-width: 600p) {
-  .btn-hidden{
-    border: transparent;
-    background-color: transparent;
-    color: transparent;
-    padding: 10px;
-  position: absolute;
-  top: 0;
-  right: 5px;
-  }
-}
-
   @media only screen and (max-width: 600px) {
+
     height: auto;
     min-height: 50px;
     display: block;
@@ -369,7 +352,14 @@ export const Navigation = styled.header`
         padding: 20px 0px;
       }
     }
-    .fa-bars {
+    .btn-hidden{
+      border: transparent;
+      background-color: transparent;
+      color: transparent;
+      padding: 10px;
+      position: relative;
+    }
+    .fabars {
       display: inline-block;
       position: absolute;
       top: 10px;
