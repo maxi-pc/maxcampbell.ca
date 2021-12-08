@@ -34,6 +34,29 @@ h1, h2, h3, h4, h5 {
   line-height: 1.3;
 }
 
+.icons{
+  display: block;
+  width: 100%;
+  
+}
+.imgicons{
+  text-align: center;
+  margin: 20px;
+  width: 90px;
+
+}
+
+.imgicons:hover{
+  background-color: ${({ theme }) => theme.skillShadowBoxcolor};  
+  transform: scale(1.02);
+}
+
+.imgicons:focus{
+  background-color: ${({ theme }) => theme.skillShadowBoxcolor};  
+  transform: scale(1.02);
+  content: attr(alt);
+}
+
 h1 {
   margin-top: 0;
   font-size: 3.052rem;
@@ -85,14 +108,6 @@ small, .text_small {font-size: 0.8rem;}
   article.noBoxShadow{
       background: none;
       box-shadow: none;
-  }
-
-  .btn-icon{
-  }
-
-.btn-icon:hover {
-    transform: scale(1.2);
-    border: gold;
   }
 
   @keyframes glow {
@@ -166,6 +181,7 @@ small, .text_small {font-size: 0.8rem;}
 
   @media only screen and (max-width: 700px) {
 
+    
     .name{
         font-family: 'Hurricane', cursive;
         font-size: 65px;
@@ -208,12 +224,12 @@ small, .text_small {font-size: 0.8rem;}
       font-size: 21px;
     }
   
-    img,
-object {
-  display: block;
-  border: 0;
-  max-width: 100%;
-  height: auto;
+
+.icons{
+  width: 100%;
+}
+.imgicons{
+ width: 60px;
 }
 
 * {
@@ -338,9 +354,11 @@ export const Navigation = styled.header`
   }
   @media only screen and (max-width: 600px) {
 
+    
     height: auto;
     min-height: 50px;
     display: block;
+
     position: relative;
     .logo {
       width: 100%;
@@ -368,10 +386,11 @@ export const Navigation = styled.header`
     }
     ul.collapsed {
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex-wrap: wrap;
+
+      display: block;
+      margin:0 auto;
+      text-align: center;
+
 
       overflow: hidden;
       max-height: 0;

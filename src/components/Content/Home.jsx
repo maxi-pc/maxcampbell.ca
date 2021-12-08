@@ -14,7 +14,9 @@ const Content = () => {
           <span>I am a Frontend Developer that enjoys building applications. Currently, I am working on expanding my knowledge with React NodeJS web applications.
           </span>
           </p>
-        </article></section></>
+        </article></section>
+
+        </>
 
     )
 }
