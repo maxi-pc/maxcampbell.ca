@@ -1,20 +1,90 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { NavLink as Link } from 'react-router-dom';
-import {FaBars} from 'react-icons/fa';
 
 export const GlobalStyles = createGlobalStyle`
-
-html {font-size: 100%;} /*16px*/
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  background: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.secondary};
+}
 
 body {
-  background: white;
+  display: flex;
+  flex-direction: column;
   font-family: 'Readex Pro', sans-serif;
   font-weight: 400;
   line-height: 1.75;
-  color: #000000;
+
+}
+
+header {
+  height: auto;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  position: sticky; top: 0;
+}
+
+main {
+display:flex;
+
+}
+
+footer {
+background:  ${({ theme }) => theme.navColor};
+height: 50px;
+display:
 
 
 }
+
+flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.imgcon{
+  display: inline-flex;
+  margin: 2%;
+  
+}
+
+.imgico{
+  height: 90px;
+  //filter: grayscale(20%);
+}
+
+.imgcon:focus::after{
+  position: absolute;
+  width: 90px;
+  transform: translate(0%,400%);
+ 
+  content: attr(title);
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 10px;
+  color:white;
+  font-size: 80%;
+}
+
+.imgico:hover{
+  //background-color: ${({ theme }) => theme.skillShadowBoxcolor};  
+  transform: scale(1.25);
+
+}
+
+
+.imgico:focus {
+  //background-color: ${({ theme }) => theme.skillShadowBoxcolor};
+  transform: scale(1.4);
+
+}
+
     .btn-hidden{
     border: transparent;
     background-color: transparent;
@@ -34,29 +104,6 @@ h1, h2, h3, h4, h5 {
   line-height: 1.3;
 }
 
-.icons{
-  display: block;
-  width: 100%;
-  
-}
-.imgicons{
-  text-align: center;
-  margin: 20px;
-  width: 90px;
-
-}
-
-.imgicons:hover{
-  background-color: ${({ theme }) => theme.skillShadowBoxcolor};  
-  transform: scale(1.02);
-}
-
-.imgicons:focus{
-  background-color: ${({ theme }) => theme.skillShadowBoxcolor};  
-  transform: scale(1.02);
-  content: attr(alt);
-}
-
 h1 {
   margin-top: 0;
   font-size: 3.052rem;
@@ -72,51 +119,32 @@ h5 {font-size: 1.25rem;}
 
 small, .text_small {font-size: 0.8rem;}
 
-  body {
-    margin: 0;
-    background: ${({ theme }) => theme.primary};
-    color: ${({ theme }) => theme.secondary};
-    position: relative;
-    min-height: 100vh;
-  }
-
-  .footer {
-    height: 50px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    background:  ${({ theme }) => theme.navColor};
-    color: white;
-    }
-
   section {
-    width: 60%;
+    min-height: 90%;
+    width: 70%;
     max-width: 1200px;
-    display: table;
+
     margin: 0 auto;
+    
 }
 
   article{
+
     margin: 5%;
     padding: 5%;
 
     border-radius: 5px;
     background: ${({ theme }) => theme.article};
     box-shadow: 0px 0px 25px 1px ${({ theme }) => theme.shadowBoxColor};
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 
   article.noBoxShadow{
       background: none;
       box-shadow: none;
-  }
-
-  @keyframes glow {
-    from {
-      box-shadow: 0 0 10px -10px #aef4af;
-    }
-    to {
-      box-shadow: 0 0 10px 10px #aef4af;
-    }
+      
   }
 
   .some-page-wrapper {
@@ -180,7 +208,6 @@ small, .text_small {font-size: 0.8rem;}
   }
 
   @media only screen and (max-width: 700px) {
-
     
     .name{
         font-family: 'Hurricane', cursive;
@@ -216,6 +243,31 @@ small, .text_small {font-size: 0.8rem;}
       font-size: 14px;
     }
 
+    .imgcon{
+      display: inline-flex;
+      margin: 5%;
+      
+    }
+    
+    .imgcon:focus::after{
+      position: absolute;
+      width: 70px;
+      transform: translate(0%,400%);
+     
+      content: attr(title);
+      background-color: rgba(0,0,0,0.6);
+      border-radius: 10px;
+      color:white;
+      font-size: 80%;
+    }
+
+    .imgico{
+      height: 70px;
+
+      //filter: grayscale(20%);
+    }
+
+
     h2{
       font-size:21px;
     }
@@ -223,14 +275,7 @@ small, .text_small {font-size: 0.8rem;}
     h1{
       font-size: 21px;
     }
-  
 
-.icons{
-  width: 100%;
-}
-.imgicons{
- width: 60px;
-}
 
 * {
   -moz-box-sizing: border-box;
@@ -254,11 +299,17 @@ export const light = {
 
 
 };
-
+// 011627 like it
 export const dark = {
-  primary: "#11191f",
+  //primary: "#11191f",
+  //secondary: "#bbc6ce",
+  //article: "#18232c",
+  //primary: "#00111c",
+  //secondary: "#bbc6ce",
+  //article: "#011627",
+  primary: "#08090C",
   secondary: "#bbc6ce",
-  article: "#18232c",
+  article: "#101218",
   shadowBoxColor: "rgba(0,0,0,0.4)",
   navColor:"#030E17",
   skillShadowBoxcolor: "rgba(0,0,0,0.4)"
@@ -281,27 +332,6 @@ export const Navigation = styled.header`
     clear: both;
     padding-bottom: 30px;
     text-decoration: none;
-
-    p {
-      width: 500px;
-      display: block;
-    }
-    em {
-      font-size: 0.5em;
-      float: left;
-      display: block;
-      img {
-        display: inline-block;
-        margin-top: 5px;
-        width: 15px;
-        float: left;
-      }
-      .letterhead {
-        display: inline-block;
-        line-height: 260%;
-        float: left;
-      }
-    }
   }
   .gray {
     color: #ccc;
@@ -421,92 +451,6 @@ export const Navigation = styled.header`
         width: 100%;
       }
     }
-  }
-`;
-
-export const Nav = styled.nav`
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  position: sticky; top: 0;
-  background: ${({ theme }) => theme.navColor};
-  color: "white";
-`;
-
-export const NavLink = styled(Link)`
-  display: flex;
-  padding: 0 1rem;
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-
-  &.active {
-    color: #15cdfc;
-  }
-`;
-
-export const Bars = styled(FaBars)`
-  display: none;
-  color: #fff;
-  @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: -10px;
-    left: 40px;
-    transform: translate(-100%, 75%);
-    font-size: 1.8rem;
-    cursor: pointer;
-  }&:hover {
-    display: block;
-  }
-
-  
-`;
-
-export const NavMenu = styled.div`
-  display: flex;
-  align-items: center;
-  margin-right: -24px;
-  /* Second Nav */
-  /* margin-right: 24px; */
-  /* Third Nav */
-  /* width: 100vw;
-  white-space: nowrap; */
-  @media screen and (max-width: 768px) {
-    display: block;
-  }&:hover {
-    display: block;
-  }
-`;
-
-export const NavBtn = styled.nav`
-  display: flex;
-  align-items: center;
-  margin-right: 24px;
-  /* Third Nav */
- justify-content: flex-end;
-  width: 100vw; 
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`;
-
-export const NavBtnLink = styled(Link)`
-  border-radius: 4px;
-  background: #256ce1;
-  padding: 10px 22px;
-  color: #fff;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  /* Second Nav */
-  margin-left: 24px;
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
   }
 `;
 

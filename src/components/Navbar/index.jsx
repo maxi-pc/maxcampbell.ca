@@ -1,37 +1,54 @@
-
-
-import React from 'react';
-import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from '../../theme';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React, { Component} from "react";
+import { NavLink } from "react-router-dom";
+import { Navigation } from '../../theme';
 import { DarkToggler } from '../DarkToggler';
+import {FaBars} from 'react-icons/fa';
+import {IoMdClose} from 'react-icons/io';
 
-const Navbar = () => {
+class NavBar extends Component {
 
-return (
-  
-        <>
-   <Nav> 
-          
+  constructor(props) {
+    super(props);
+    this.state = {
+      isExpanded: false
+    };
+  }
 
-     <Bars />
-    <NavMenu>
-       <NavLink to="/" activeStyle>
-             Home
-         </NavLink>
-      <NavLink to="/portfolio" activeStyle>
-             Portfolio
-         </NavLink>
-       <NavLink to="/about" activeStyle>
-             About
-         </NavLink>
-       <NavLink to="/contact" activeStyle>
-             Contact
-         </NavLink>
-     </NavMenu>
-     <DarkToggler/>
-      </Nav>
-       </>
+  handleToggle(e) {
+    e.preventDefault();
+    this.setState({
+      isExpanded: !this.state.isExpanded
+    });
+  }
+
+  render() {
+    const { isExpanded } = this.state;
+    return (
+      <Navigation>
+        <div className="logo">
+        </div>
+        <nav className="nav">
+         { isExpanded ? <IoMdClose className="fabars" size="39px" aria-hidden="true" color="white" onClick={e => this.handleToggle(e)}/> : <FaBars className="fabars" size="31px" aria-hidden="true" onClick={e => this.handleToggle(e)}/> }
+          <ul  className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
+            <NavLink to="/" activeStyle>
+              <li>home</li>
+            </NavLink>
+            <NavLink to="/Portfolio" activeStyle>
+              <li>Portfolio</li>
+            </NavLink>
+            <NavLink to="/about" activeStyle>
+              <li>About</li>
+            </NavLink>
+            <NavLink to="/contact" activeStyle>
+              <li>Contact</li>
+            </NavLink> 
+                      
+            <DarkToggler/>
+          </ul>
+        </nav>
+      </Navigation>
     );
-};
+  }
+}
 
-export default Navbar;
+export default NavBar;

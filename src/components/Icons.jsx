@@ -16,8 +16,6 @@ class MySkills extends Component {
     this.setState({
       listOfImages: list
     });
-
-   // const listItems = listOfImages.map((d) => <li key={d.name}>{d.name}</li>
     
   }
 

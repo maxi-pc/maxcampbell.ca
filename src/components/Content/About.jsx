@@ -19,7 +19,7 @@ ENGINEERING TECHNOLOGIST</p>
     </div>
     <div className='column'>
       <div className='column'>
-          <img src={aboutPictures} width="100%"></img>
+          <img src={aboutPictures} width="100%" alt="Maximiliano Peirano Campbell"></img>
      </div>
     </div>
   </div>

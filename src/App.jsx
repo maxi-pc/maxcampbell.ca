@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from './components/Navbar/navBar';
+import Navbar from './components/Navbar/index';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -17,17 +17,18 @@ function App() {
 
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <ThemeProvider theme={theme === 'light' ? light : dark}><GlobalStyles/>
-      <Router> 
-      <Navbar />
-    <Routes>
+     <Router>
+      
+      
+      <header><Navbar /></header>
+    <main><Routes>
     <Route exact path='*' element={<NotFound/>} />
      <Route exact path='/' element={<Home />} />
      <Route exact path='/Portfolio' element={<Portfolio/>} />
      <Route exact path='/About' element={<About/>} />
      <Route exact path='/contact' element={<Contact/>} />
-     </Routes>
-      <Footer />
-   </Router>
+     </Routes></main>
+   </Router> <footer><Footer /></footer>
    </ThemeProvider>
    </ThemeContext.Provider>
   );

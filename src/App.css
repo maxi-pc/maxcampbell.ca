@@ -2,49 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Readex+Pro:400');
 
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
-
-
-
-.toggleDarkButton {
-    padding: 10;
-    border: none;
-    background: none;
-    }:hover{
-    rotate: 90degree;
-    }
-    
-    .container404{
-        max-width: 500px;
-        margin: auto;
-    }
-
-
-    
-    .centerNameContent{
- 
-      margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);
-    }
-    
-    .centerPageContent{
-        width: 500px;
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%) 
-      }
-
-      h2{
-        font-size: 26px;
-      }
-    
     .name{
         font-family: 'Hurricane', cursive;
         font-size: 140px;
@@ -59,25 +16,9 @@
           font-size: 60px;
           line-height: 60px;  
       }
-      .centerNameContent{
- 
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-    
-      }
 
-      h2{
-        font-size: 18px;
-      }
       
    }
     
-    
-    .hidden{
-      font-size: 0px;  
-    }
+  
         
