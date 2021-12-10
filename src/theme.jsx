@@ -1,7 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-html, body {
+html, body, #root {
   height: 100%;
   width: 100%;
   padding: 0;
@@ -11,12 +11,18 @@ html, body {
   color: ${({ theme }) => theme.secondary};
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+ }
+
 body {
   display: flex;
   flex-direction: column;
   font-family: 'Readex Pro', sans-serif;
   font-weight: 400;
   line-height: 1.75;
+
 
 }
 
@@ -30,23 +36,44 @@ header {
 }
 
 main {
-display:flex;
-
+flex: auto;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-flex-direction: column;
+-ms-flex-direction: column;
+flex-direction: column;
+-webkit-flex-wrap: wrap;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+-webkit-justify-content: center;
+-ms-flex-pack: center;
+justify-content: center;
+-webkit-align-content: center;
+-ms-flex-line-pack: center;
+align-content: center;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center;
 }
 
 footer {
 background:  ${({ theme }) => theme.navColor};
+color: white;
+display: flex;
+bottom: 0;
+min-height: 50px;
 height: 50px;
-display:
+-webkit-justify-content: center;
+-ms-flex-pack: center;
+justify-content: center;
+-webkit-align-content: center;
+-ms-flex-line-pack: center;
+align-content: center;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center;
 
-
-}
-
-flex-wrapper {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  justify-content: flex-start;
 }
 
 .imgcon{
@@ -120,25 +147,30 @@ h5 {font-size: 1.25rem;}
 small, .text_small {font-size: 0.8rem;}
 
   section {
-    min-height: 90%;
-    width: 70%;
-    max-width: 1200px;
 
-    margin: 0 auto;
-    
+    max-width: 1200px;
 }
 
   article{
-
+  
     margin: 5%;
     padding: 5%;
 
     border-radius: 5px;
     background: ${({ theme }) => theme.article};
     box-shadow: 0px 0px 25px 1px ${({ theme }) => theme.shadowBoxColor};
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+
+    
   }
 
   article.noBoxShadow{
