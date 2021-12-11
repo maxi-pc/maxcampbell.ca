@@ -1,5 +1,4 @@
 import React from 'react';
-import MySkills from '../Icons2';
 
 const Content = () => {
   

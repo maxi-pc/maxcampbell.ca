@@ -13,6 +13,7 @@ import mysql from './../skills/mysql.png'
 import netlify from './../skills/netlify.png'
 import nodejs from './../skills/nodejs.png'
 import npm from './../skills/npm.png'
+import photoshop from './../skills/photoshop.png'
 import php from './../skills/php.png'
 import phpmyadmin from './../skills/phpmyadmin.png'
 import react from './../skills/react.png'
@@ -34,6 +35,7 @@ const Icons = [
     { name: "netlify", src: netlify },
     { name: "nodejs", src: nodejs },
     { name: "npm", src: npm },
+    { name: "photoshop", src: photoshop },
     { name: "php", src: php },
     { name: "phpmyadmin", src: phpmyadmin },
     { name: "react", src: react },

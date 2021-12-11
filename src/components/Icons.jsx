@@ -1,34 +1,18 @@
-import React, { Component } from "react";
+import Icons from '../images/skills/index';
 
-class MySkills extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { listOfImages: [] };
-  }
-  importAll(r) {
-    return r.keys().map(r);
-  }
+const MySkills = () => {
 
-  componentWillMount() {
-    const list = this.importAll(
-      require.context("./../images/skills", false, /\.(png)$/)
-    );
-    this.setState({
-      listOfImages: list
-    });
-    
-  }
+  var i = -1;
+  const listIcons = Icons.map((icon) => (<div key={icon.name} className="imgcon" title={icon.name} tabIndex={i++}><img className="imgico" src={icon.src} title={icon.name} alt={icon.name}></img></div>))
 
-  render() {
     return (
-      <> <h2>My Stack</h2>
-      <center><div class="icons">
-            {this.state.listOfImages.map((image, index ) => (
-              <img class="imgicons" src={image} key={index} tabindex="1" alt=""></img>
-            ))}</div></center>
+        <> <h2>My Technologies</h2>
+        <center><div>
+        {listIcons}
+        </div></center>
       </>
-    );
-  }
-}
+      );
+    }
+  
 
-export default MySkills;
+  export default MySkills  

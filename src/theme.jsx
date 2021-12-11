@@ -22,17 +22,25 @@ body {
   font-family: 'Readex Pro', sans-serif;
   font-weight: 400;
   line-height: 1.75;
+}
 
-
+.hidden{
+  display:none;
 }
 
 header {
-  height: auto;
+
   width: 100%;
-  z-index: 1;
+
+
   display: flex;
-  justify-content: center;
-  position: sticky; top: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  z-index: 200;
+  background-color: white;
 }
 
 main {
@@ -153,8 +161,8 @@ small, .text_small {font-size: 0.8rem;}
 
   article{
   
-    margin: 5%;
-    padding: 5%;
+margin: 5%;
+   padding: 5%;
 
     border-radius: 5px;
     background: ${({ theme }) => theme.article};
@@ -176,6 +184,7 @@ small, .text_small {font-size: 0.8rem;}
   article.noBoxShadow{
       background: none;
       box-shadow: none;
+
       
   }
 
@@ -388,6 +397,7 @@ export const Navigation = styled.header`
       display: flex;
       justify-content: space-between;
       list-style-type: none;
+      
     }
     li {
       margin: 0 15px;

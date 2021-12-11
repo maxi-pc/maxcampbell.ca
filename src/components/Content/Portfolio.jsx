@@ -1,6 +1,5 @@
 import React from 'react';
-//import MySkills from '../Icons';
-import MySkills from '../Icons2';
+import MySkills from '../Icons';
 
 const Portfolio = () => {
     return (
