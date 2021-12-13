@@ -1,5 +1,6 @@
 import React from 'react';
 import aboutPictures from '../../images/aboutPicture.jpg';
+import MySocials from '../socialIcons';
 
 const About = () => {
     return (
@@ -20,6 +21,7 @@ ENGINEERING TECHNOLOGIST</p>
     <div className='column'>
       <div className='column'>
           <img src={aboutPictures} width="100%" alt="Maximiliano Peirano Campbell"></img>
+          <MySocials/>
      </div>
     </div>
   </div>

@@ -1,23 +1,21 @@
-import React, { Component} from "react";
+import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { Navigation } from '../../theme';
-import { DarkToggler } from '../DarkToggler';
-import {FaBars} from 'react-icons/fa';
-import {IoMdClose} from 'react-icons/io';
-
+import { Navigation } from "../../theme";
+import { DarkToggler } from "../DarkToggler";
+import { FaBars } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
 class NavBar extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
-      isExpanded: false
+      isExpanded: false,
     };
   }
 
   handleToggle(e) {
     e.preventDefault();
     this.setState({
-      isExpanded: !this.state.isExpanded
+      isExpanded: !this.state.isExpanded,
     });
   }
 
@@ -25,11 +23,25 @@ class NavBar extends Component {
     const { isExpanded } = this.state;
     return (
       <Navigation>
-        <div className="logo">
-        </div>
+        <div className="logo"></div>
         <nav className="nav">
-         { isExpanded ? <IoMdClose className="fabars" size="39px" aria-hidden="true" color="white" onClick={e => this.handleToggle(e)}/> : <FaBars className="fabars" size="31px" aria-hidden="true" onClick={e => this.handleToggle(e)}/> }
-          <ul  className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
+          {isExpanded ? (
+            <IoMdClose
+              className="fabars"
+              size="39px"
+              aria-hidden="true"
+              color="white"
+              onClick={(e) => this.handleToggle(e)}
+            />
+          ) : (
+            <FaBars
+              className="fabars"
+              size="31px"
+              aria-hidden="true"
+              onClick={(e) => this.handleToggle(e)}
+            />
+          )}
+          <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
             <NavLink to="/" activeStyle>
               <li>home</li>
             </NavLink>
@@ -41,9 +53,9 @@ class NavBar extends Component {
             </NavLink>
             <NavLink to="/contact" activeStyle>
               <li>Contact</li>
-            </NavLink> 
-                      
-            <DarkToggler/>
+            </NavLink>
+
+            <DarkToggler />
           </ul>
         </nav>
       </Navigation>

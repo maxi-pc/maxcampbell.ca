@@ -6,10 +6,11 @@ const MySkills = () => {
   const listIcons = Icons.map((icon) => (<div key={icon.name} className="imgcon" title={icon.name} tabIndex={i++}><img className="imgico" src={icon.src} title={icon.name} alt={icon.name}></img></div>))
 
     return (
-        <> <h2>My Technologies</h2>
-        <center><div>
+        <> 
+        <h2>My Technologies</h2>
+        <center>
         {listIcons}
-        </div></center>
+       </center>
       </>
       );
     }
