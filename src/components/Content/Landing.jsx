@@ -11,10 +11,11 @@ const Landing = () => {
 
     return (
         <>
-       <section>
+       <section className='noShadowBox'>
        <h1 className="hidden">Home</h1>
        <HeroFull><Home/></HeroFull>
-       <HeroMid><MySkills/></HeroMid>
+       <HeroFull><MySkills/></HeroFull>
+       <HeroFull><Banners/></HeroFull>
        </section>
 
         </>

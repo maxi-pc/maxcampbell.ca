@@ -100,13 +100,46 @@ a:hover {
   font-size: 2rem;
 } */
 
+.column-wrapper{
+  display: flex;
+  flex: 0 1 24%;
+  outline-style: solid;
+  outline-color: green;
+}
+
+.card-container{
+width: 100%;
+}
+
+.card-row{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+}
+
+.card{
+  margin: 1%;
+ //display: flex;
+  width: 300px;
+  height: 400px;
+  outline-style: solid;
+  outline-color: red;
+  background-color: blue;
+  
+}
+
+.card-image{
+//height: 50%;
+width: 90%;
+}
 
 .heroFull{
   display:flex;
   flex-direction: column;
   height: 100vh;
- // outline-style: solid;
- // outline-color: red;
+  outline-style: solid;
+  outline-color: red;
   -webkit-justify-content: center;
 -ms-flex-pack: center;
 justify-content: center;
@@ -116,23 +149,15 @@ align-content: center;
 -webkit-align-items: center;
 -ms-flex-align: center;
 align-items: center;
+background: none;
 }
 
 .heroMid{
-  display:flex;
-  flex-direction: column;
-  height: 50vh;
- // outline-style: solid;
- // outline-color: blue;
-  -webkit-justify-content: center;
--ms-flex-pack: center;
-justify-content: center;
--webkit-align-content: center;
--ms-flex-line-pack: center;
-align-content: center;
--webkit-align-items: center;
--ms-flex-align: center;
-align-items: center;
+
+  //max-height: 50vh;
+  outline-style: solid;
+  outline-color: blue;
+
 }
 
 .hidden{
@@ -165,10 +190,10 @@ align-items: center;
 footer {
 background:  ${({ theme }) => theme.navColor};
 color: white;
-display: flex;
-bottom: 0;
 min-height: 50px;
 height: 50px;
+display: flex;
+width: 100%;
 -webkit-justify-content: center;
 -ms-flex-pack: center;
 justify-content: center;
@@ -177,7 +202,7 @@ justify-content: center;
 align-content: center;
 -webkit-align-items: center;
 -ms-flex-align: center;
-align-items: center;
+align-items: center; 
 
 }
 
@@ -295,11 +320,8 @@ margin: 5%;
     justify-content: center;
   }
 
-  article.noBoxShadow{
-      background: none;
-      box-shadow: none;
-
-      
+ article .noBoxShadow{
+      background: white;
   }
 
   .some-page-wrapper {
@@ -362,8 +384,12 @@ margin: 5%;
     }
   }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 800px) {
     
+    .heroFull{
+      min-height: 100vh;
+      height: 100%;
+    }
     .nav-me{
       background: steelblue;
       flex-direction: column;
@@ -437,7 +463,7 @@ margin: 5%;
     }
 
     .imgico{
-      height: 39px;
+      height: 59px;
    
      //filter: invert(0.90);
     }
