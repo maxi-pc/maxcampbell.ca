@@ -1,3 +1,4 @@
+import { Slide } from 'react-awesome-reveal';
 import Icons from '../images/skills/index';
 
 const MySkills = () => {
@@ -7,10 +8,10 @@ const MySkills = () => {
 
     return (
         <> 
-        <h2>My Technologies</h2>
-        <center>
-        {listIcons}
-       </center>
+      
+      <Slide direction='right'><center><h2>My Technologies</h2></center></Slide>
+        <div className='icon-wrapper'>
+        <Slide delay='100'>{listIcons}</Slide></div>
       </>
       );
     }

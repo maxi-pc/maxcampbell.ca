@@ -24,6 +24,12 @@ body {
   line-height: 1.75;
 }
 
+.icon-wrapper{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
+
 .social-icons{
   color: ${({ theme }) => theme.secondary};
   border-radius: 5px;
@@ -119,25 +125,28 @@ width: 100%;
 }
 
 .card{
-  margin: 1%;
+  margin: 2%;
+ // padding: 20px;
  //display: flex;
-  width: 300px;
+  width: 280px;
   height: 400px;
   outline-style: solid;
   outline-color: red;
-  background-color: blue;
-  
+  background-color: #${({ theme }) => theme.article};
+  -webkit-animation: slide-in-left 1.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-left 1.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .card-image{
 //height: 50%;
-width: 90%;
+width: 100%;
 }
 
 .heroFull{
   display:flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 70vh;
+  height: 100%;
   outline-style: solid;
   outline-color: red;
   -webkit-justify-content: center;
@@ -150,6 +159,8 @@ align-content: center;
 -ms-flex-align: center;
 align-items: center;
 background: none;
+-webkit-animation: slide-in-left 1.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+animation: slide-in-left 1.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .heroMid{
@@ -207,10 +218,8 @@ align-items: center;
 }
 
 .imgcon{
-  display: inline-flex;
-
-  margin: 2%;
-  
+  //display: flex;
+ // margin: 1%;
 }
 
 .imgico{
@@ -446,15 +455,15 @@ margin: 5%;
     }
 
     .imgcon{
-      display: grid-auto;
-      margin: 3%;
+      //display: grid-auto;
+      //margin: 3%;
       
     }
     
     .imgcon:focus::after{
       position: absolute;
       width: 90px;
-      transform: translate(-30%,150%);
+      transform: translate(-100%,150%);
       content: attr(title);
       background-color: rgba(0,0,0,0.6);
       border-radius: 10px;
