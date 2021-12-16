@@ -9,9 +9,9 @@ const MySkills = () => {
     return (
         <> 
       
-      <Slide direction='right'><center><h2>My Technologies</h2></center></Slide>
-        <div className='icon-wrapper'>
-        <Slide delay='100'>{listIcons}</Slide></div>
+      <Slide direction='right'><center><h2>My Toolbox</h2></center></Slide>
+         <Slide><div className='icon-wrapper'>
+       {listIcons}</div></Slide>
       </>
       );
     }

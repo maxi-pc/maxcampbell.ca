@@ -1,3 +1,4 @@
+import { AttentionSeeker } from 'react-awesome-reveal'
 import { BsGithub } from 'react-icons/bs'
 import { BsLinkedin } from 'react-icons/bs'
 import { FaDev } from 'react-icons/fa'
@@ -18,9 +19,9 @@ const MySocials = () => {
 
     return (
         <> <h2></h2>
-        <center><div>
-        {listIcons}
-        </div></center>
+      <div className='social-container'> <AttentionSeeker>
+        {listIcons}</AttentionSeeker>
+        </div>
       </>
       );
     }

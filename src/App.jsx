@@ -11,6 +11,7 @@ import { GlobalStyles, light, dark } from './theme';
 import { ThemeContext, ThemeProvider } from 'styled-components';
 import Landing from './components/Content/Landing';
 //import NavBar from './components/Navbar/index2';
+import ReactFullpage from './components/Content/Landing';
 
 function App() {
   const [theme, toggleTheme] = useState('light');
@@ -24,7 +25,7 @@ function App() {
       <header><Navbar /></header>
     <main><Routes>
     <Route exact path='*' element={<NotFound/>} />
-     <Route exact path='/' element={<Landing />} />
+     <Route exact path='/' element={<ReactFullpage />} />
      <Route exact path='/Portfolio' element={<Portfolio/>} />
      <Route exact path='/About' element={<About/>} />
      <Route exact path='/contact' element={<Contact/>} />

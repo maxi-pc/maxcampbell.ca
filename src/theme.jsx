@@ -24,10 +24,63 @@ body {
   line-height: 1.75;
 }
 
+.portfolio-container{
+outline-style: solid;
+outline-color: red;
+
+}
+.portfolio-column{
+width: 100%;
+outline-style: solid;
+outline-color: yellow;
+}
+
+.portfolio-item{
+  max-width: 100%;
+  outline-style: solid;
+outline-color: blue;
+display: grid;
+grid-template-columns: 40% repeat(2, 30%);
+grid-template-rows: 10% 50%;
+grid-column-gap: 0px;
+grid-row-gap: 0px; 
+-webkit-justify-content: center;
+-ms-flex-pack: center;
+justify-content: center;
+-webkit-align-content: center;
+-ms-flex-line-pack: center;
+align-content: center;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center; 
+
+}
+
+.portfolio-item-title{ 
+  grid-area: 1 / 1 / 2 / 2;
+} 
+
+.portfolio-item-URL{
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.portfolio-item-git{
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.portfolio-item-image{
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.portfolio-item-text{
+  grid-area: 2 / 2 / 3 / 4;
+}
+
 .icon-wrapper{
-  display: flex;
-  justify-content: space-between;
+  display: flex; 
   flex-wrap: wrap; 
+  flex-direction: row;
+justify-content: center;
 }
 
 .social-icons{
@@ -106,49 +159,90 @@ a:hover {
   font-size: 2rem;
 } */
 
+.social-container{
+  //width: 30%;
+
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  text-align: center;
+  }
+
 .column-wrapper{
   display: flex;
   flex: 0 1 24%;
-  outline-style: solid;
-  outline-color: green;
-}
 
+}
 .card-container{
 width: 100%;
+display: flex;
+flex-wrap: wrap; 
+justify-content: space-between;
 }
+
+
 
 .card-row{
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap; 
+
 }
 
-.card{
-  margin: 2%;
- // padding: 20px;
- //display: flex;
-  width: 280px;
-  height: 400px;
-  outline-style: solid;
-  outline-color: red;
+
+
+ .card {
+  border-radius: 10px;
+border-style: solid;
+border-color:  ${({ theme }) => theme.secondary};
+text-decoration: none!important;
+  width: 270px;
+  height: 550px;
+
   background-color: #${({ theme }) => theme.article};
-  -webkit-animation: slide-in-left 1.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation: slide-in-left 1.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+color: ${({ theme }) => theme.secondary};
+
+}:focus{
+  color: #15cdfc;
+  text-decoration: none!important;
+}:active{
+  color: ${({ theme }) => theme.secondary};
+}:visited{
+  text-decoration: none!important;
+  color: ${({ theme }) => theme.secondary};
+}:link{
+  color: #15cdfc;
+}
+
+
+.card : visited{
+  text-decoration: none!important;
+}
+.card-title{
+  text-decoration: none!important;
+  text-align: center;
+} 
+
+.card-content{
+  text-align: center;
 }
 
 .card-image{
-//height: 50%;
 width: 100%;
 }
+
+.card-image:hover{
+transform: scale(1.1);
+}
+
 
 .heroFull{
   display:flex;
   flex-direction: column;
   min-height: 70vh;
   height: 100%;
-  outline-style: solid;
-  outline-color: red;
+
   -webkit-justify-content: center;
 -ms-flex-pack: center;
 justify-content: center;
@@ -159,8 +253,7 @@ align-content: center;
 -ms-flex-align: center;
 align-items: center;
 background: none;
--webkit-animation: slide-in-left 1.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-animation: slide-in-left 1.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+box-shadow: none;
 }
 
 .heroMid{
@@ -219,7 +312,9 @@ align-items: center;
 
 .imgcon{
   //display: flex;
- // margin: 1%;
+  margin: 2%;  
+
+  justify-content: space-beween;
 }
 
 .imgico{
@@ -230,35 +325,30 @@ align-items: center;
 .imgcon:focus::after{
   position: absolute;
   width: 90px;
-  transform: translate(0%,400%);
+  transform: translate(-96%,-120%);
+
  
   content: attr(title);
-  background-color: rgba(0,0,0,0.6);
+  background-color: ${({ theme }) => theme.primary};
+  border-style: solid;
   border-radius: 10px;
-  color:white;
-  font-size: 80%;
+  border-color: ${({ theme }) => theme.secondary};
+  color:${({ theme }) => theme.secondary};
+  font-size: 90%;
+  text-align: center;
 }
 
 .imgico:hover{
   //background-color: ${({ theme }) => theme.skillShadowBoxcolor};  
-  transform: scale(1.25);
+ // transform: scale(1.25);
 
 }
 
 
 .imgico:focus {
   //background-color: ${({ theme }) => theme.skillShadowBoxcolor};
-  transform: scale(1.4);
+  //transform: scale(1.4);
 
-}
-
-.banner-card{
-  display: block;
-  flex-position: rows;
-  height: 50%;
-  width: 300px;
-  outline-style: solid;
-  outline-color: blue;
 }
 
     .btn-hidden{
@@ -399,6 +489,53 @@ margin: 5%;
       min-height: 100vh;
       height: 100%;
     }
+
+    .card-row{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; 
+    }
+
+    .portfolio-item{
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 10% repeat(2, 40%) repeat(2, 5%);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px; 
+    
+      -webkit-justify-content: center;
+-ms-flex-pack: center;
+justify-content: center;
+-webkit-align-content: center;
+-ms-flex-line-pack: center;
+align-content: center;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center; 
+    }
+
+
+    .portfolio-item-title{ 
+      grid-area: 1 / 1 / 2 / 2;
+    } 
+    
+    .portfolio-item-URL{
+      grid-area: 4 / 1 / 5 / 2;
+    }
+    
+    .portfolio-item-git{
+      grid-area: 5 / 1 / 6 / 2; 
+    }
+    
+    .portfolio-item-image{
+      grid-area: 2 / 1 / 3 / 2; 
+    }
+    
+    .portfolio-item-text{
+      grid-area: 3 / 1 / 4 / 2;
+    }
+
     .nav-me{
       background: steelblue;
       flex-direction: column;
@@ -456,14 +593,14 @@ margin: 5%;
 
     .imgcon{
       //display: grid-auto;
-      //margin: 3%;
+      margin: 3%;
       
     }
     
     .imgcon:focus::after{
       position: absolute;
-      width: 90px;
-      transform: translate(-100%,150%);
+      width: 59px;
+      transform: translate(-96%,-100%);
       content: attr(title);
       background-color: rgba(0,0,0,0.6);
       border-radius: 10px;
@@ -472,9 +609,8 @@ margin: 5%;
     }
 
     .imgico{
-      height: 59px;
-   
-     //filter: invert(0.90);
+      height: 59px;   
+     //filter: invert(0.99);
     }
 
 
@@ -502,7 +638,7 @@ margin: 5%;
 export const light = {
   primary: "#F2FDFF",
   secondary: "#101935",
-  article: "F2FDFF",
+  article: "#F2FDFF",
   shadowBoxColor: "none",
   navColor: "#030E17",
   skillShadowBoxcolor: "rgba(0,0,0,0.1)",
