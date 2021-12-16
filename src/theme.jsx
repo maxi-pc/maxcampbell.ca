@@ -25,20 +25,20 @@ body {
 }
 
 .portfolio-container{
-outline-style: solid;
-outline-color: red;
+//outline-style: solid;
+//outline-color: red;
 
 }
 .portfolio-column{
 width: 100%;
-outline-style: solid;
-outline-color: yellow;
+//outline-style: solid;
+//outline-color: yellow;
 }
 
 .portfolio-item{
   max-width: 100%;
-  outline-style: solid;
-outline-color: blue;
+  //outline-style: solid;
+//outline-color: blue;
 display: grid;
 grid-template-columns: 40% repeat(2, 30%);
 grid-template-rows: 10% 50%;
