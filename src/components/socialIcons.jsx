@@ -19,9 +19,9 @@ const MySocials = () => {
 
     return (
         <> <h2></h2>
-      <div className='social-container'> <AttentionSeeker>
-        {listIcons}</AttentionSeeker>
-        </div>
+      <AttentionSeeker><div className='social-container'> 
+        {listIcons}
+        </div></AttentionSeeker>
       </>
       );
     }
