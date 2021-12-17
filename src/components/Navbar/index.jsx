@@ -18,13 +18,14 @@ class NavBar extends Component {
       isExpanded: !this.state.isExpanded,
     });
   }
+  
 
   render() {
     const { isExpanded } = this.state;
     return (
       <Navigation>
         <div className="logo"></div>
-        <nav className="nav">
+        <nav className="nav" tabIndex="0">
           {isExpanded ? (
             <IoMdClose
               className="fabars"

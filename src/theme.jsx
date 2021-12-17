@@ -37,11 +37,12 @@ width: 100%;
 
 .portfolio-item{
   max-width: 100%;
+  
   //outline-style: solid;
 //outline-color: blue;
 display: grid;
 grid-template-columns: 40% repeat(2, 30%);
-grid-template-rows: 10% 50%;
+grid-template-rows: 50% 50%;
 grid-column-gap: 0px;
 grid-row-gap: 0px; 
 -webkit-justify-content: center;
@@ -54,6 +55,8 @@ align-content: center;
 -ms-flex-align: center;
 align-items: center; 
 
+}:visited{
+  color: ${({ theme }) => theme.secondary};
 }
 
 .portfolio-item-title{ 
@@ -61,8 +64,14 @@ align-items: center;
 } 
 
 .portfolio-item-URL{
+  color: ${({ theme }) => theme.secondary};
   grid-area: 1 / 2 / 2 / 3;
+}:visited{
+  //color: ${({ theme }) => theme.secondary};
+}:hover{
+  //color: blue;
 }
+
 
 .portfolio-item-git{
   grid-area: 1 / 3 / 2 / 4;
@@ -70,6 +79,7 @@ align-items: center;
 
 .portfolio-item-image{
   grid-area: 2 / 1 / 3 / 2;
+  //height: 70%;
 }
 
 .portfolio-item-text{
@@ -192,7 +202,7 @@ justify-content: space-between;
 
 
 
- .card {
+ a .card {
   border-radius: 10px;
 border-style: solid;
 border-color:  ${({ theme }) => theme.secondary};
@@ -203,26 +213,35 @@ text-decoration: none!important;
   background-color: #${({ theme }) => theme.article};
 color: ${({ theme }) => theme.secondary};
 
-}:focus{
-  color: #15cdfc;
-  text-decoration: none!important;
-}:active{
-  color: ${({ theme }) => theme.secondary};
-}:visited{
-  text-decoration: none!important;
-  color: ${({ theme }) => theme.secondary};
-}:link{
-  color: #15cdfc;
 }
 
-
-.card : visited{
-  text-decoration: none!important;
+a: link{
+  text-decoration: none!important; 
 }
-.card-title{
-  text-decoration: none!important;
-  text-align: center;
-} 
+
+a: visited{
+ // color: white;
+}
+
+.card a:link{
+ // color: gold;
+ // text-decoration: none!important;
+}
+
+.card: a:visited{
+ // text-decoration: none!important;
+  //color: gold;
+}
+
+.card a:active{
+  //text-decoration: none!important;
+  //color: gold;
+}
+
+.card a:hover{
+ // text-decoration: none!important;
+ // color: gold;
+}
 
 .card-content{
   text-align: center;
