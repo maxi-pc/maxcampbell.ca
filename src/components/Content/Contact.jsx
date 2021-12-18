@@ -26,7 +26,7 @@ const Contact = () => {
   
       <section>
         <article>  <h1>Contact Me</h1>
-      <form name="contact" method="POST" data-netlify="true">
+      <form name="contact" netlify>
         <div>
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" required />
