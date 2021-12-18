@@ -26,7 +26,7 @@ const Contact = () => {
   
       <section>
         <article>  <h1>Contact Me</h1>
-      <form onSubmit={handleSubmit} netlify>
+      <form name="contact" method="POST" data-netlify="true">
         <div>
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" required />
@@ -39,7 +39,7 @@ const Contact = () => {
           <label htmlFor="message">Message:</label>
           <textarea id="message" required/>
         </div>
-        <button type="submit">{status}</button>
+        <button type="submit">Send</button>
       </form></article></section>
     );
   };
