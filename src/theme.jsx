@@ -103,7 +103,7 @@ grid-row-gap: 0px;
 form{
   display: flex;
   flex-direction: column;
- // width: 500px;
+  width: 500px;
  min-width: 500px;
   font-family: 'Readex Pro', sans-serif;
 }
@@ -127,8 +127,8 @@ input{
 }
 
 textarea{
-  width: 100%;
-  max-width: 100%;
+ // width: 100%;
+ max-width: 100%;
  // background: ${({ theme }) => theme.article};
 //  color: ${({ theme }) => theme.secondary};
  // font-family: 'Readex Pro', sans-serif;
@@ -551,6 +551,16 @@ margin: 5%;
   }
 
   @media only screen and (max-width: 800px) {
+
+    form{
+      width: 100%;
+      //background: ${({ theme }) => theme.article};
+    }
+
+    .form-input{
+      background: ${({ theme }) => theme.article};
+     // height: 100%;
+    }
     
     .heroFull{
       min-height: 100vh;
