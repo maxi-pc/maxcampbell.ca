@@ -92,6 +92,24 @@ grid-row-gap: 0px;
 
 }
 
+form{
+  width: 500px;
+}
+
+input{
+  width: 100%;
+}
+
+.button{
+  width: 100%;
+  height: 60px;
+}
+
+textarea{
+  width: 100%;
+  max-width: 100%;
+}
+
 .icon-wrapper{
   display: flex; 
   flex-wrap: wrap; 

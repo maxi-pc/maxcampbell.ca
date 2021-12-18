@@ -1,46 +1,45 @@
 import React, { useState } from 'react';
 
 const Contact = () => {
-    const [status, setStatus] = useState("Submit");
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      setStatus("Sending...");
-      const { name, email, message } = e.target.elements;
-      let details = {
-        name: name.value,
-        email: email.value,
-        message: message.value,
-      };
-      let response = await fetch("http://localhost:3000/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json;charset=utf-8",
-        },
-        body: JSON.stringify(details),
-      });
-      setStatus("Submit");
-      let result = await response.json();
-      alert(result.status);
-    };
+
     return (
   
-      <section>
-        <article>  <h1>Contact Me</h1>
-      <form name="contact" netlify>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" required />
-        </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" required />
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" required/>
-        </div>
-        <button type="submit">Send</button>
-      </form></article></section>
+
+        <article>  
+          <h1>Contact Me</h1>
+          <form
+    name="simpleContactForm"
+    method="POST"
+    data-netlify="true"
+    data-netlify-recaptcha="true"
+    id="simple-contact-form"
+    class="contact-form"
+>
+    <p class="form-row">
+        <label id="contact-form-name-label" for="contact-form-name" class="form-label">Name</label>
+        <input type="text" name="name" id="contact-form-name" aria-labelledby="contact-form-name-label" class="form-input" />
+    </p>
+    <p class="form-row">
+        <label id="contact-form-email-label" for="contact-form-email" class="form-label">Email address</label>
+        <input type="email" name="email" id="contact-form-email" aria-labelledby="contact-form-email-label" class="form-input" />
+    </p>
+    <p class="form-row">
+        <label id="contact-form-message-label" for="contact-form-message" class="form-label">Message</label>
+        <textarea
+            name="message"
+            id="contact-form-message"
+            aria-labelledby="contact-form-message-label"
+            class="form-textarea"
+            rows="7"
+        ></textarea>
+    </p>
+    <div data-netlify-recaptcha="true" class="form-row"></div>
+    <p class="form-row form-submit">
+        <button type="submit" class="button">Send</button>
+    </p>
+</form>
+      
+      </article>
     );
   };
 
