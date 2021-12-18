@@ -10,7 +10,7 @@ const NotFound = () => {
   <center className="centerPageContent"> <p><h1 className='hidden'>404</h1></p>
           
           <h2>Page Not Found</h2>
-        <img src={NotFoundImage} width='50%'/>
+        <img src={NotFoundImage} width='50%' alt='NotFound'/>
          <p><Link to={'/'}><button className="NotFoundBtn">Go Home</button></Link></p></center>
         </>
     )

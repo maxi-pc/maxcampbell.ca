@@ -3,7 +3,7 @@ import { Slide } from "react-awesome-reveal";
 const Home = () => {
   return (
     <>
-      <Slide><span className="name">Max Campbell.</span>
+      <Slide triggerOnce><span className="name">Max Campbell.</span>
       <span>
         <h2>Builder ✓ Problem Solver ✓ Agile ✓</h2>
       </span>

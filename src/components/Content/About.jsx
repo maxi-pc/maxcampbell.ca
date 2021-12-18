@@ -10,7 +10,7 @@ const About = () => {
   <div className='row'>
     <div className='column'>
       <div className='column'>
-      <p>I'M A JUNIOR FONTEND DEVELOPER &
+      <p>I'M A FONTEND DEVELOPER &
 ENGINEERING TECHNOLOGIST</p>
 <p>Hi! My name is Maximiliano (Max) Peirano Campbell, graduated from Douglas College with a Diploma in Computing Studies & Information Systems. I have Planned, Analysed, Designed, Implemented, Tested and Integrated, Maintained projects while in college, and as personal hobby following the AGILE software development cycle.
 </p>

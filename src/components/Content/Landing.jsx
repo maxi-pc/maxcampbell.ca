@@ -1,6 +1,5 @@
 import React from 'react';
 import HeroFull from './HeroFull';
-import HeroMid from './HeroMid';
 import Home from './Home';
 import MySkills from '../Icons';
 import MyWeb from '../IconsWeb';

@@ -15,10 +15,10 @@ const Icons = [
 const MySocials = () => {
 
   var i = -1;
-  const listIcons = Icons.map((icons) => (<div key={icons.name} className="imgcon" title={icons.name} tabIndex={i++}><a href={icons.URL} target="_blank">{<icons.icon size="28" className="social-icons"/>}</a></div>))
+  const listIcons = Icons.map((icons) => (<div key={icons.name} className="imgcon" title={icons.name} tabIndex={i++}><a href={icons.URL} target="_blank" rel="noreferrer">{<icons.icon size="28" className="social-icons"/>}</a></div>))
 
     return (
-        <> <h2></h2>
+        <> 
       <AttentionSeeker><div className='social-container'> 
         {listIcons}
         </div></AttentionSeeker>

@@ -9,8 +9,8 @@ const MyWeb = () => {
     return (
         <> 
       
-      <Slide><center><h2>My Cloud & Web Technologies</h2></center></Slide>
-         <Slide direction='right'><div className='icon-wrapper'>
+      <Slide triggerOnce><center><h2>My Cloud & Web Technologies</h2></center></Slide>
+         <Slide triggerOnce direction='right'><div className='icon-wrapper'>
        {listIcons}</div></Slide>
       </>
       );

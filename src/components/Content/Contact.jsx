@@ -26,7 +26,7 @@ const Contact = () => {
   
       <section>
         <article>  <h1>Contact Me</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} netlify>
         <div>
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" required />

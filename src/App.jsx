@@ -9,7 +9,6 @@ import Contact from './components/Content/Contact';
 import NotFound from './components/Content/NotFound';
 import { GlobalStyles, light, dark } from './theme';
 import { ThemeContext, ThemeProvider } from 'styled-components';
-import Landing from './components/Content/Landing';
 //import NavBar from './components/Navbar/index2';
 import ReactFullpage from './components/Content/Landing';
 
