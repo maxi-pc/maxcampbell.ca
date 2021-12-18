@@ -92,22 +92,46 @@ grid-row-gap: 0px;
 
 }
 
+.form-input{
+  font-family: 'Readex Pro', sans-serif;
+  background: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.secondary};
+  border-style: none;
+  //filter: invert(90%);
+}
+
 form{
-  width: 500px;
+  display: flex;
+  flex-direction: column;
+ // width: 500px;
+ min-width: 500px;
+  font-family: 'Readex Pro', sans-serif;
 }
 
 input{
   width: 100%;
+  //background: ${({ theme }) => theme.article};
+ // color: ${({ theme }) => theme.secondary};
+ // font-family: 'Readex Pro', sans-serif;
 }
 
-.button{
+.contact-btn{
   width: 100%;
   height: 60px;
+  background: ${({ theme }) => theme.third};
+  border-style: none;
+  font-family: 'Readex Pro', sans-serif;
+  color: white;
+}:focus{
+
 }
 
 textarea{
   width: 100%;
   max-width: 100%;
+ // background: ${({ theme }) => theme.article};
+//  color: ${({ theme }) => theme.secondary};
+ // font-family: 'Readex Pro', sans-serif;
 }
 
 .icon-wrapper{
@@ -680,6 +704,7 @@ align-items: center;
 export const light = {
   primary: "#F2FDFF",
   secondary: "#101935",
+  third: "#15cdfc",
   article: "#F2FDFF",
   shadowBoxColor: "none",
   navColor: "#030E17",
@@ -695,6 +720,7 @@ export const dark = {
   //article: "#011627",
   primary: "#08090C",
   secondary: "#bbc6ce",
+  third: "#15cdfc",
   article: "#101218",
   shadowBoxColor: "rgba(0,0,0,0.4)",
   navColor: "#030E17",
