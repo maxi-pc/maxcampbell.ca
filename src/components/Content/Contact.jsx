@@ -27,22 +27,21 @@ const Contact = () => {
 
         <article>  
           <h1>Contact Me</h1>
-          <form name='contact' action='/contact' method='post'>
+          <form name="contact" method="post">
           <input type="hidden" name="form-name" value="contact" />
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" required className='form-input'/>
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" required className='form-input' />
-      </div>
-      <div>
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" required className='form-input' rows='7' />
-      </div>
-      <button type="submit" className='contact-btn'>Send</button>
-    </form>
+          <p>
+            <label>Your Name: <input type="text" name="name"/></label>
+          </p>
+          <p>
+            <label>Your Email: <input type="email" name="email"/></label>
+          </p>
+          <p>
+            <label>Message: <textarea name="message"></textarea></label>
+          </p>
+          <p>
+            <button type="submit" className='contact-btn'>Send</button>
+          </p>
+        </form>
       
       </article>
     );
