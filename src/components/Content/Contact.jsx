@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Slide } from 'react-awesome-reveal';
-import Success from './Success';
+
 
 
 const Contact = () => {
@@ -30,7 +30,7 @@ const Contact = () => {
 
      <article><Slide direction='up' > 
           <h1>Contact Me</h1>
-          <form name="contact" method="post" action="/Success">
+          <form name="contact" method="post" action={"/success"}>
           <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>Your Name: <input type="text" name="name"/></label>

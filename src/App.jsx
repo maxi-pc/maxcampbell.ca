@@ -12,6 +12,7 @@ import { ThemeContext, ThemeProvider } from 'styled-components';
 //import NavBar from './components/Navbar/index2';
 import ReactFullpage from './components/Content/Landing';
 import ScrollToTop from './components/scrollToTop';
+import Success from './components/Content/Success';
 
 
 function App() {
@@ -30,9 +31,10 @@ function App() {
 
     <Route exact path='*' element={<NotFound/>} />
      <Route exact path='/' element={<ReactFullpage />} />
-     <Route exact path='/Portfolio' element={<Portfolio/>} />
-     <Route exact path='/About' element={<About/>} />
+     <Route exact path='/portfolio' element={<Portfolio/>} />
+     <Route exact path='/about' element={<About/>} />
      <Route exact path='/contact' element={<Contact/>} />
+     <Route exact path='/success' element={<Success/>} />
      </Routes></main>
    </Router> <footer><Footer /></footer>
    </ThemeProvider>

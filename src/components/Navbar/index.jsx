@@ -46,7 +46,7 @@ class NavBar extends Component {
             <NavLink to="/" activeStyle>
               <li>home</li>
             </NavLink>
-            <NavLink to="/Portfolio" activeStyle>
+            <NavLink to="/portfolio" activeStyle>
               <li>Portfolio</li>
             </NavLink>
             <NavLink to="/about" activeStyle>
