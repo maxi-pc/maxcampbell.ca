@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { Slide } from 'react-awesome-reveal';
+import Success from './Success';
+
 
 const Contact = () => {
   const [status, setStatus] = useState("Submit");
@@ -25,9 +28,9 @@ const Contact = () => {
     return (
   
 
-        <article>  
+     <article><Slide direction='up' > 
           <h1>Contact Me</h1>
-          <form name="contact" method="post" action="/contact">
+          <form name="contact" method="post" action="/Success">
           <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>Your Name: <input type="text" name="name"/></label>
@@ -36,13 +39,13 @@ const Contact = () => {
             <label>Your Email: <input type="email" name="email"/></label>
           </p>
           <p>
-            <label>Message: <textarea name="message"></textarea></label>
+            <label>Message: <textarea name="message" rows="7"></textarea></label>
           </p>
           <p>
             <button type="submit" className='contact-btn'>Send</button>
           </p>
         </form>
-      
+      </Slide>
       </article>
     );
   };

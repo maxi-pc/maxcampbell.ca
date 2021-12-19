@@ -11,6 +11,8 @@ import { GlobalStyles, light, dark } from './theme';
 import { ThemeContext, ThemeProvider } from 'styled-components';
 //import NavBar from './components/Navbar/index2';
 import ReactFullpage from './components/Content/Landing';
+import ScrollToTop from './components/scrollToTop';
+
 
 function App() {
   const [theme, toggleTheme] = useState('light');
@@ -18,11 +20,14 @@ function App() {
 
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <ThemeProvider theme={theme === 'light' ? light : dark}><GlobalStyles/>
+     
+     
      <Router>
       
       
       <header><Navbar /></header>
-    <main><Routes>
+    <main>   <ScrollToTop /><Routes>
+
     <Route exact path='*' element={<NotFound/>} />
      <Route exact path='/' element={<ReactFullpage />} />
      <Route exact path='/Portfolio' element={<Portfolio/>} />

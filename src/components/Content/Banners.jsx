@@ -8,12 +8,12 @@ const Banners = () => {
   
 
     return (
-
-        <Slide triggerOnce className='card-container'><div className='card-container'>
-        
+     <center>  
+        <Slide triggerOnce><div className='card-container'>
+ 
       <div className='card-row'>
           <Slide triggerOnce><a href='/about'><div className='card' tabIndex='0'>
-        <div className='card-title'><h2>My Skills</h2></div>
+        <div className='card-title'><h2 id='hero-banner'>My Skills</h2></div>
         <div className='card-content'><p>See what stacks I am familiar with, I am always learning new skills!</p></div>
         <div className='card-image'><img src={SkillsImage} className='card-image' alt='My Skills'/></div>
  </div></a></Slide>
@@ -27,7 +27,7 @@ const Banners = () => {
         <div className='card-content'><p>Need to get in touch? Please check my contact page here.</p></div>
         <div className='card-image'><img src={ContactImage} className='card-image' alt='Contact Me'/></div>
         </div></a></Slide>
-</div> </div></Slide>
+</div></div></Slide> </center>
 
 
     )

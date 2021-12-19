@@ -1,11 +1,13 @@
 import React from 'react';
 import aboutPictures from '../../images/aboutPicture.jpg';
 import MySocials from '../socialIcons';
+import { Slide } from 'react-awesome-reveal';
 
 const About = () => {
     return (
         <>       
-   <section><article><p><h1>About Me</h1></p>
+   <section><Slide triggerOnce>
+     <article><p><h1>About Me</h1></p>
  <div className='some-page-wrapper'>
   <div className='row'>
     <div className='column'>
@@ -27,23 +29,23 @@ ENGINEERING TECHNOLOGIST</p>
   </div>
     </div>
  </article>
-
- <article className="mySkills">
+</Slide>
+<Slide cascade direction='right' triggerOnce><article className="mySkills">
      <h2>My Skills</h2>
  <div className='some-page-wrapper'>
   <div className='row'>
-      <div className='column-skills' tabindex="1">
+ <div className='column-skills' tabindex="1">
       <h5>WEB DESIGN HTML CSS JS NODE REACT AJAX PHP</h5>
       <p>Demonstrated skills designing, implementing, debugging web pages in HTML, CSS, JS, AJAX, PHP in projects during education in the courses of: Adv Web Pgm - Javascript/AJAX, Web Based Scripting, Multimedia Web Development.</p>
 <p>Demonstrated CMS (Content Management System) experience using WordPress and Joomla as well as implementing and debugging plugins or themes.</p>
     </div>
-    <div className='column-skills' tabindex="2">
+  <div className='column-skills' tabindex="2">
       <h5>VISUAL STUDIO C#</h5>
       <p>Demonstrated skills designing, implementing, debugging C# applications in projects during education in the courses of: Data Structures & Algorithms , Systems Analysis & Design, Intro to Programming I.</p>
 <p>Personal experience includes creating additional features to GTA5 private servers through Lua. For personal Unity projects I designed and implemented an item system to a game project I created.</p>
     </div>
   </div>
-  <div className='row'>
+ <div className='row'>
     <div className='column-skills' tabindex="3">
       <h5>ECLIPSE/INTELLIJ IDEA JAVA</h5>
       <p>Demonstrated skills designing, implementing, debugging Java Applications in projects during education in the course of: Software Engineering.</p>
@@ -65,7 +67,7 @@ ENGINEERING TECHNOLOGIST</p>
     </div>
   </div>
 </div>
- </article>
+ </article></Slide> 
  </section>     </>
     )
 }

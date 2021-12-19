@@ -1,5 +1,6 @@
 import { Slide } from 'react-awesome-reveal';
 import IconsWeb from '../images/skills/indexWeb';
+import { FcFlashOn } from 'react-icons/fc';
 
 const MyWeb = () => {
 
@@ -9,9 +10,12 @@ const MyWeb = () => {
     return (
         <> 
       
-      <Slide triggerOnce><center><h2>My Cloud & Web Technologies</h2></center></Slide>
+      <Slide triggerOnce><center><h2 id='hero-web' className='hero-anchor'>My Cloud & Web Technologies</h2></center></Slide>
          <Slide triggerOnce direction='right'><div className='icon-wrapper'>
-       {listIcons}</div></Slide>
+       {listIcons}<p><FcFlashOn/>Experience working on multiple cloud deployment platforms<br/>
+       <FcFlashOn/>Demonstrated experience hosting and managing websites<br/>
+       </p></div>
+       </Slide>
       </>
       );
     }

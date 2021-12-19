@@ -24,6 +24,98 @@ body {
   line-height: 1.75;
 }
 
+.heroNav{
+top: 50px; left: 50px;
+position: fixed;
+
+//background: green;
+height: 100vh;
+display: flex;
+flex-direction: column;
+
+justify-content: center;
+
+align-content: center;
+
+align-items: center;
+
+}
+
+.heroLinkContainer{
+  height: 100%;
+  //background: blue;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-content: center;
+
+  align-items: center;
+
+  gap: 100px;
+
+}
+
+.hero-anchor
+{
+ // position: relative;
+ // padding-top: 40vh;  
+}
+
+.heroLinkContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  list-style-type: none;
+  text-decoration: none;
+
+
+  .heroLinks{
+  //  padding: 6px 0;
+
+  
+    a {
+      position: relative;
+      display: block;
+      padding: 0px 0;
+      color:  ${({ theme }) => theme.secondary};
+     // text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.5s;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background: ${({ theme }) => theme.third};
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s;
+      }
+
+      &:hover {
+        color: #95a5a6;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+      &:active {
+ 
+
+ color: blue;
+
+      }
+
+    }
+  }
+}
+
 .portfolio-container{
 //outline-style: solid;
 //outline-color: red;
@@ -110,28 +202,35 @@ form{
 
 input{
   width: 100%;
-  //background: ${({ theme }) => theme.article};
- // color: ${({ theme }) => theme.secondary};
- // font-family: 'Readex Pro', sans-serif;
+  height: 30px;
+  font-size: 100%;
+  background: ${({ theme }) => theme.primary};
+   color: ${({ theme }) => theme.secondary};
+  font-family: 'Readex Pro', sans-serif;
+  border-color:  ${({ theme }) => theme.secondary};
+  border-radius: 5px;
 }
 
 .contact-btn{
-  width: 100%;
+  width: 101%;
   height: 60px;
   background: ${({ theme }) => theme.third};
-  border-style: none;
+   color: white;
   font-family: 'Readex Pro', sans-serif;
-  color: white;
-}:focus{
-
+  border-color:  ${({ theme }) => theme.secondary};
+  border-radius: 5px;
+}:hover{
+border-color: ${({ theme }) => theme.third}; 
 }
 
 textarea{
- width: 100%;
+ width: 110%;
  max-width: 100%;
- // background: ${({ theme }) => theme.article};
-//  color: ${({ theme }) => theme.secondary};
- // font-family: 'Readex Pro', sans-serif;
+ background: ${({ theme }) => theme.primary};
+ color: ${({ theme }) => theme.secondary};
+font-family: 'Readex Pro', sans-serif;
+border-color:  ${({ theme }) => theme.secondary};
+border-radius: 5px;
 }
 
 .icon-wrapper{
@@ -232,25 +331,28 @@ a:hover {
 
 }
 .card-container{
-width: 100%;
-display: flex;
-flex-wrap: wrap; 
-justify-content: space-between;
+  width: 100%;
 }
 
 
 
 .card-row{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; 
+
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+
 
 }
 
-
+.card{
+}
 
  a .card {
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+  align-items: center;
   border-radius: 10px;
 border-style: solid;
 border-color:  ${({ theme }) => theme.secondary};
@@ -261,6 +363,12 @@ text-decoration: none!important;
   background-color: #${({ theme }) => theme.article};
 color: ${({ theme }) => theme.secondary};
 
+  gap: 10%;
+  margin: 20px;
+}
+
+a: hover .card {
+  border-color:  ${({ theme }) => theme.third};
 }
 
 a: link{
@@ -297,6 +405,7 @@ a: visited{
 
 .card-image{
 width: 100%;
+filter: invert(0.08);
 }
 
 .card-image:hover{
@@ -533,6 +642,15 @@ margin: 5%;
     transform: scale(1.03);
   
   }
+
+  @media screen and (max-width: 1300px) {
+
+    .heroLinkContainer{
+display: none;
+      }
+
+
+    }
   
 
   
@@ -567,12 +685,19 @@ margin: 5%;
       height: 100%;
     }
 
+card-container{
+display: flex;
+}
+
     .card-row{
       width: 100%;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap; 
+      align-content: center;
+      align-items: center;
     }
+
+
 
     .portfolio-item{
       display: grid;
@@ -803,6 +928,7 @@ export const Navigation = styled.header`
       padding-left: 15px;
       padding-top: 0px !important;
     }
+
   }
   @media only screen and (max-width: 600px) {
     height: auto;
