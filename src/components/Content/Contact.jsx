@@ -27,7 +27,7 @@ const Contact = () => {
 
         <article>  
           <h1>Contact Me</h1>
-          <form name="contact" method="post">
+          <form name="contact" method="post" action="/contact">
           <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>Your Name: <input type="text" name="name"/></label>
