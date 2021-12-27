@@ -2,7 +2,7 @@ import React from "react";
 import { Slide } from "react-awesome-reveal";
 const Home = () => {
   return (
-    <><h1 id="hero-name" className="hero-anchor"></h1>
+    <>
       <Slide triggerOnce><span className="name" >Max Campbell.</span>
       <span>
         <h2 >Builder ✓ Problem Solver ✓ Agile ✓</h2>

@@ -22,35 +22,34 @@ const portfolio = [
 const Portfolio = () => {
 
     var i = -1;
-    function isEven(i){
-        if(i%2 === 0)
-        return true;
-        else
-        return false;
-    }
+
     const listPortfolio = portfolio.map((project) => (
-     <Slide triggerOnce direction={isEven(i) ? 'right' : 'left'}>
-<h2>{project.title}</h2>
-   <article key={project.title} tabIndex={i++} className='portfolio-item'>
+
+    
+<div>
+ <Slide triggerOnce='true' direction='left' fraction='0'><h2>{project.title}</h2>
+
+    <article key={project.title} tabIndex={i++} className='portfolio-item'>
      <div className='portfolio-item-title'></div> 
-    <div className='portfolio-item-URL'><p> URL:<br/>{ project.URL === "N/A" ? project.URL :  <AttentionSeeker><a href={project.URL}>{project.URL}</a></AttentionSeeker>}</p></div> 
-    <div className='portfolio-item-git'><p> Github:<br/>{project.git === "N/A" ? project.git :  <AttentionSeeker><a href={project.git}>{project.title}</a></AttentionSeeker>}</p></div> 
+    <div className='portfolio-item-URL'>URL:<br/>{ project.URL === "N/A" ? project.URL :  <AttentionSeeker><a href={project.URL}>{project.URL}</a></AttentionSeeker>}</div> 
+    <div className='portfolio-item-git'>Github:<br/>{project.git === "N/A" ? project.git :  <AttentionSeeker><a href={project.git}>{project.title}</a></AttentionSeeker>}</div> 
     <div className='portfolio-item-image'>{project.image}</div>
     <div className='portfolio-item-text'> About:<br/>{project.text}</div>
    
   
-    </article></Slide>
+    </article></Slide></div>
     ))
     return (
         <>
-    
+ 
 <section>
 <center>
 
 <div className='portfolio-container'>
-<div className='portfolio-column'>
 
-{listPortfolio}
+  <div className='portfolio-column'>
+
+ {listPortfolio}
 
 </div>
 </div>

@@ -9,7 +9,7 @@ const Banners = () => {
 
     return (
      <center>  
-        <Slide triggerOnce><div className='card-container'>
+        <Slide triggerOnce cascade><div className='card-container'>
  
       <div className='card-row'>
           <Slide triggerOnce><a href='/about'><div className='card' tabIndex='0'>

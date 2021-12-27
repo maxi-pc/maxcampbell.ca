@@ -57,11 +57,7 @@ align-items: center;
 
 }
 
-.hero-anchor
-{
- // position: relative;
- // padding-top: 40vh;  
-}
+
 
 .heroLinkContainer{
   display: flex;
@@ -130,7 +126,7 @@ width: 100%;
 .portfolio-item{
   max-width: 100%;
   
-  //outline-style: solid;
+//outline-style: solid;
 //outline-color: blue;
 display: grid;
 grid-template-columns: 40% repeat(2, 30%);
@@ -138,7 +134,11 @@ grid-template-rows: 20% 80%;
 grid-column-gap: 0px;
 grid-row-gap: 0px; 
 
-
+.portfolio-item-git{
+  a {
+    color: ${({ theme }) => theme.secondary};  
+  }
+}
 
 }:visited{
   color: ${({ theme }) => theme.secondary};
@@ -149,8 +149,11 @@ grid-row-gap: 0px;
 } 
 
 .portfolio-item-URL{
-  color: ${({ theme }) => theme.secondary};
+ // color: ${({ theme }) => theme.secondary};
   grid-area: 1 / 2 / 2 / 3;  
+  //outline-style: solid;
+  //outline-color: green;
+
 
 }:visited{
   //color: ${({ theme }) => theme.secondary};
@@ -170,7 +173,8 @@ grid-row-gap: 0px;
 
 .portfolio-item-git{
   grid-area: 1 / 3 / 2 / 4;
-
+ // outline-style: solid;
+ // outline-color: yellow;
 }
 
 .portfolio-item-image{
@@ -353,8 +357,9 @@ flex-wrap: wrap;
    flex-direction: column;
    align-content: center;
   align-items: center;
-  border-radius: 10px;
-border-style: solid;
+  border-radius: 5px;
+border-style: ridge;
+border-width: 1px;
 border-color:  ${({ theme }) => theme.secondary};
 text-decoration: none!important;
   width: 270px;
@@ -365,7 +370,8 @@ color: ${({ theme }) => theme.secondary};
 
   gap: 10%;
   margin: 20px;
-}
+  box-shadow: 0px 0px 5px 1px  ${({ theme }) => theme.bannerShadowBox};
+  }
 
 a: hover .card {
   border-color:  ${({ theme }) => theme.third};
@@ -495,7 +501,7 @@ align-items: center;
 
 .imgico{
   height: 90px;
- // filter: invert(90%);
+ filter: ${({ theme }) => theme.filterColor};
 }
 
 .imgcon:focus::after{
@@ -685,9 +691,22 @@ display: none;
       height: 100%;
     }
 
+    form{
+      display: flex;
+      flex-direction: column;
+
+     // width: 100px;
+     min-width: 100%;
+      font-family: 'Readex Pro', sans-serif;
+    }
+
 card-container{
 display: flex;
+
 }
+
+
+
 
     .card-row{
       width: 100%;
@@ -697,45 +716,12 @@ display: flex;
       align-items: center;
     }
 
-
-
-    .portfolio-item{
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: 10% repeat(2, 40%) repeat(2, 5%);
-      grid-column-gap: 0px;
-      grid-row-gap: 0px; 
-    
-      -webkit-justify-content: center;
--ms-flex-pack: center;
-justify-content: center;
--webkit-align-content: center;
--ms-flex-line-pack: center;
-align-content: center;
--webkit-align-items: center;
--ms-flex-align: center;
-align-items: center; 
-    }
-
-    .portfolio-item{
-      border-style: solid;
-    }
-    
-    .portfolio-item-URL{
-      grid-area: 4 / 1 / 5 / 2;
-    }
-    
-    .portfolio-item-git{
-      grid-area: 5 / 1 / 6 / 2; 
-    }
-    
-    .portfolio-item-image{
-      grid-area: 2 / 1 / 3 / 2; 
-    }
-    
-    .portfolio-item-text{
-      grid-area: 3 / 1 / 4 / 2;
-    }
+  
+  .portfolio-item{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
     .nav-me{
       background: steelblue;
@@ -844,6 +830,8 @@ export const light = {
   shadowBoxColor: "none",
   navColor: "#030E17",
   skillShadowBoxcolor: "rgba(0,0,0,0.1)",
+  filterColor: "invert(0%)",
+  bannerShadowBox: "rgba(0,0,0,0.6)",
 };
 // 011627 like it
 export const dark = {
@@ -860,6 +848,8 @@ export const dark = {
   shadowBoxColor: "rgba(0,0,0,0.4)",
   navColor: "#030E17",
   skillShadowBoxcolor: "rgba(0,0,0,0.4)",
+  filterColor: "invert(90%)",
+  bannerShadowBox: "rgba(255,255,255,0.21)",
 };
 
 export const Navigation = styled.header`

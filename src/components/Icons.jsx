@@ -10,7 +10,7 @@ const MySkills = () => {
     return (
         <> 
       <div id='hero-toolbox'>
-      <Slide fraction='0' triggerOnce direction='right'><center><h2 className='hero-anchor'>My Toolbox</h2></center></Slide>
+      <Slide triggerOnce direction='right' cascade fraction='1'><center><h2 className='hero-anchor'>My Toolbox</h2></center></Slide>
          <Slide triggerOnce><div className='icon-wrapper'>
        {listIcons}<p><FcFlashOn/>Highly interactive Front end / User Interfaces for your web and mobile applications<br/>
       <FcFlashOn/>Demonstrated ReactJS responsive front end websites<br/>

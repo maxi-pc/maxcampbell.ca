@@ -28,7 +28,7 @@ const Contact = () => {
     return (
   
 
-     <article><Slide direction='up' > 
+     <article className='contact'><Slide direction='up' > 
           <h1>Contact Me</h1>
           <form name="contact" method="post" action={"/success"}>
           <input type="hidden" name="form-name" value="contact" />
